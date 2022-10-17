@@ -14,25 +14,37 @@
         android:layout_height="300dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/photo" />
-
     <SeekBar
         android:id="@+id/seekBar1"
-        android:onClick="RGBchange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="1" />
+
     <SeekBar
         android:id="@+id/seekBar2"
-        android:onClick="RGBchange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="1"/>
+
     <SeekBar
         android:id="@+id/seekBar3"
-        android:onClick="RGBchange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="1" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="1" />
 
     <TextView
         android:id="@+id/textView"
