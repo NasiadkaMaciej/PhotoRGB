@@ -10,8 +10,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:layout_weight="1"
         app:srcCompat="@drawable/photo" />
     <SeekBar
@@ -53,5 +54,26 @@
         android:layout_weight="1"
         android:textAlignment="center"
         android:text="Maciej Nasiadka" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rotate left"
+            android:onClick="rotateL"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rotate right"
+            android:onClick="rotateR"/>
+    </LinearLayout>
 
 </LinearLayout>

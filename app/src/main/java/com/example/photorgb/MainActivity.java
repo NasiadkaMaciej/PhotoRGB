@@ -71,4 +71,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void rotateL(View view) {
+        image.setRotation(image.getRotation()-90);
+    }
+    public void rotateR(View view) {
+        image.setRotation(image.getRotation()+90);
+    }
 }
