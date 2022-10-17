@@ -11,8 +11,9 @@ import android.widget.SeekBar;
 public class MainActivity extends AppCompatActivity {
 
     ImageView image;
-    SeekBar WhiteSB, RedSB, GreenSB, BlueSB;
-
+    SeekBar WhiteSB, RedSB, GreenSB, BlueSB, HeightSB, WidthSB;
+    int baseHeight = 200;
+    int baseWidth = 300;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         RedSB = findViewById(R.id.seekBar2);
         GreenSB = findViewById(R.id.seekBar3);
         BlueSB = findViewById(R.id.seekBar4);
+        HeightSB = findViewById(R.id.seekBar5);
+        WidthSB = findViewById(R.id.seekBar6);
+
         WhiteSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
@@ -68,6 +72,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 image.setColorFilter((Color.argb(WhiteSB.getProgress(), RedSB.getProgress(), GreenSB.getProgress(), BlueSB.getProgress())));
+            }
+        });
+        HeightSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                image.getLayoutParams().height = baseHeight*HeightSB.getProgress();
+                image.requestLayout();
+            }
+        });
+        WidthSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                image.getLayoutParams().width = baseWidth*WidthSB.getProgress();
+                image.requestLayout();
             }
         });
     }
