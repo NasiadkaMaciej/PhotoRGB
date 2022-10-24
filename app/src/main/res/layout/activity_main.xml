@@ -31,7 +31,7 @@
         android:layout_weight="0"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
-        android:text="Height (Does not work)" />
+        android:text="Height" />
     <SeekBar
         android:id="@+id/seekBar5"
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:textAlignment="center"
-        android:text="Width (Does not work)" />
+        android:text="Width" />
     <SeekBar
         android:id="@+id/seekBar6"
         android:layout_width="match_parent"

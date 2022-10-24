@@ -83,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                image.getLayoutParams().height = baseHeight*HeightSB.getProgress();
-                image.requestLayout();
+                image.setScaleY((float)HeightSB.getProgress()/100);
             }
         });
         WidthSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -96,8 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                image.getLayoutParams().width = baseWidth*WidthSB.getProgress();
-                image.requestLayout();
+                image.setScaleX((float)WidthSB.getProgress()/100);
             }
         });
     }
